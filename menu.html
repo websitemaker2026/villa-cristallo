@@ -1,0 +1,163 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/menu.html b/menu.html
+index 0fbdb8bbed3e92c95cc65da2f6ce9dbd75c8f53e..119c28d9f2d5dc97378ac999a7e0b687a1287796 100644
+--- a/menu.html
++++ b/menu.html
+@@ -1,68 +1,95 @@
+-<!doctype html>
+-<html lang="en">
+-  <head>
+-    <meta charset="UTF-8" />
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+-    <title>Menu | Ristorante Lago d’Oro</title>
+-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@400;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
+-    <link rel="stylesheet" href="styles.css" />
+-  </head>
+-  <body>
+-    <header class="navbar">
+-      <div class="container nav-inner">
+-        <a class="brand" href="index.html">Ristorante Lago d’Oro</a>
+-        <button class="nav-toggle" aria-label="Open menu">☰</button>
+-        <ul class="nav-links">
+-          <li><a href="index.html">Home</a></li>
+-          <li><a class="active" href="menu.html">Menu</a></li>
+-          <li><a href="about.html">About Us</a></li>
+-          <li><a href="gallery.html">Gallery</a></li>
+-          <li><a href="reservations.html">Reservations</a></li>
+-          <li><a href="contact.html">Contact</a></li>
+-        </ul>
++<!DOCTYPE html>
++<html lang="it">
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Menu | Villa Cristallo</title>
++  <link rel="preconnect" href="https://fonts.googleapis.com">
++  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
++  <link rel="stylesheet" href="styles.css">
++</head>
++<body>
++  <header class="navbar">
++    <div class="container navbar-inner">
++      <a class="brand" href="index.html">Villa <span>Cristallo</span></a>
++      <ul class="nav-links">
++        <li><a href="index.html">Home</a></li>
++        <li><a class="active" href="menu.html">Menu</a></li>
++        <li><a href="prenotazioni.html">Prenotazioni</a></li>
++        <li><a href="esperienze.html">Esperienze</a></li>
++        <li><a href="contatti.html">Contatti</a></li>
++      </ul>
++    </div>
++  </header>
++
++  <section class="hero" data-parallax="0.2" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=80'); min-height:70vh;">
++    <div class="container hero-content">
++      <h1>Menu Degustazione</h1>
++      <p>Piatti iconici tra tradizione italiana e haute cuisine contemporanea.</p>
++    </div>
++  </section>
++
++  <main class="section">
++    <div class="container">
++      <div class="menu-section reveal">
++        <h2 class="section-title">Antipasti</h2>
++        <div class="menu-list">
++          <article class="menu-item"><h4>Tartare di tonno rosso con caviale e lime</h4><p>Freschezza marina e note agrumate d'autore.</p></article>
++          <article class="menu-item"><h4>Carpaccio di wagyu con scaglie d’oro</h4><p>Morbidezza assoluta e finish minerale.</p></article>
++          <article class="menu-item"><h4>Burrata artigianale con tartufo nero</h4><p>Contrasto elegante tra cremosità e profumo boschivo.</p></article>
++        </div>
+       </div>
+-    </header>
+ 
+-    <section class="page-hero">
+-      <div class="container reveal">
+-        <h1>Our Menu</h1>
+-        <p>Italian gourmet cuisine and lake fish specialties crafted with seasonal ingredients.</p>
++      <div class="menu-section reveal">
++        <h2 class="section-title">Primi</h2>
++        <div class="menu-list">
++          <article class="menu-item"><h4>Risotto allo zafferano con foglia d’oro</h4><p>Mantecatura vellutata e persistenza aromatica.</p></article>
++          <article class="menu-item"><h4>Tagliolini al tartufo bianco</h4><p>Pasta fresca tirata a mano, profumo intenso.</p></article>
++          <article class="menu-item"><h4>Ravioli ripieni di astice</h4><p>Ripieno nobile e riduzione al bisque.</p></article>
++        </div>
+       </div>
+-    </section>
+ 
+-    <main class="section container reveal">
+-      <section class="menu-group">
+-        <h2>Antipasti</h2>
+-        <div class="menu-item"><span>Carpaccio di Lavarello, citrus oil, fennel</span><strong class="price">€22</strong></div>
+-        <div class="menu-item"><span>Burrata d’Oro with heirloom tomatoes and basil pearls</span><strong class="price">€18</strong></div>
+-        <div class="menu-item"><span>Polenta croccante with wild mushrooms and truffle foam</span><strong class="price">€19</strong></div>
+-      </section>
++      <div class="menu-section reveal">
++        <h2 class="section-title">Secondi</h2>
++        <div class="menu-list">
++          <article class="menu-item"><h4>Filetto di manzo wagyu A5</h4><p>Selezione premium con jus al Porto.</p></article>
++          <article class="menu-item"><h4>Branzino in crosta di sale</h4><p>Cottura delicata, emulsione al limone candito.</p></article>
++          <article class="menu-item"><h4>Anatra glassata al miele</h4><p>Dolcezza bilanciata e croccantezza perfetta.</p></article>
++        </div>
++      </div>
+ 
+-      <section class="menu-group">
+-        <h2>Primi</h2>
+-        <div class="menu-item"><span>Risotto al Pesce Persico del Lago di Como</span><strong class="price">€29</strong></div>
+-        <div class="menu-item"><span>Tagliolini al Limone with red prawns and pistachio</span><strong class="price">€31</strong></div>
+-        <div class="menu-item"><span>Ravioli ripieni di ricotta, sage butter, toasted almonds</span><strong class="price">€25</strong></div>
+-      </section>
++      <div class="menu-section reveal">
++        <h2 class="section-title">Dessert</h2>
++        <div class="menu-list">
++          <article class="menu-item"><h4>Sfera di cioccolato fondente con cuore caldo</h4><p>Scenografia e intensità in un solo gesto.</p></article>
++          <article class="menu-item"><h4>Tiramisù destrutturato</h4><p>Classico italiano reinterpretato in chiave moderna.</p></article>
++          <article class="menu-item"><h4>Gelato artigianale al pistacchio di Bronte</h4><p>Cremosità piena e aroma autentico siciliano.</p></article>
++        </div>
++      </div>
+ 
+-      <section class="menu-group">
+-        <h2>Secondi</h2>
+-        <div class="menu-item"><span>Filetto di Trota salmonata, saffron cream, chicory</span><strong class="price">€34</strong></div>
+-        <div class="menu-item"><span>Vitello alla Milanese with lemon herb salad</span><strong class="price">€36</strong></div>
+-        <div class="menu-item"><span>Branzino in crosta di sale, seasonal vegetables</span><strong class="price">€38</strong></div>
+-      </section>
++      <div class="menu-section reveal">
++        <h2 class="section-title">Vini Premium</h2>
++        <div class="grid grid-3">
++          <article class="card"><div class="card-media"><img src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=1100&q=80" alt="Champagne"></div><div class="card-content"><h3>Champagne</h3><p>Selezione di maison iconiche e cuvée rare.</p></div></article>
++          <article class="card"><div class="card-media"><img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1100&q=80" alt="Barolo"></div><div class="card-content"><h3>Barolo</h3><p>Annate pregiate con struttura e profondità.</p></div></article>
++          <article class="card"><div class="card-media"><img src="https://images.unsplash.com/photo-1586370434639-0fe43b7c8f22?auto=format&fit=crop&w=1100&q=80" alt="Brunello"></div><div class="card-content"><h3>Brunello</h3><p>Espressioni eleganti della migliore Toscana.</p></div></article>
++        </div>
++      </div>
++    </div>
++  </main>
+ 
+-      <section class="menu-group">
+-        <h2>Dessert</h2>
+-        <div class="menu-item"><span>Tiramisù della Casa with single-origin cocoa</span><strong class="price">€14</strong></div>
+-        <div class="menu-item"><span>Panna cotta al miele di castagno and wild berries</span><strong class="price">€13</strong></div>
+-        <div class="menu-item"><span>Torta d’Oro with hazelnut and dark chocolate</span><strong class="price">€15</strong></div>
+-      </section>
+-    </main>
++  <footer class="footer">
++    <div class="container footer-inner">
++      <p>© 2026 Villa Cristallo · Via delle Onde 12, Bellagio</p>
++      <div class="socials">
++        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
++        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
++        <a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a>
++      </div>
++    </div>
++  </footer>
+ 
+-    <footer class="footer"><div class="container">© <span id="year"></span> Ristorante Lago d’Oro</div></footer>
+-    <script src="script.js"></script>
+-  </body>
++  <script src="script.js"></script>
++</body>
+ </html>
+ 
+EOF
+)
