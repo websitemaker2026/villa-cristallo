@@ -1,0 +1,333 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+index d93f8ca460462f08edae4efac7b9475fc242647b..be59341cfa24caa7fecac4a43e359af2b956988b 100644
+--- a/index.html
++++ b/index.html
+@@ -1,236 +1,100 @@
+-<!doctype html>
++<!DOCTYPE html>
+ <html lang="it">
+-  <head>
+-    <meta charset="UTF-8" />
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+-    <title>Hotel Villa Aurora | Boutique Hotel di Lusso sul Lago di Como</title>
+-    <meta
+-      name="description"
+-      content="Hotel Villa Aurora: boutique hotel di lusso sul Lago di Como. Camere eleganti, spa panoramica, ristorante gourmet e tour privati in barca in una villa storica restaurata."
+-    />
+-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+-    <link
+-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap"
+-      rel="stylesheet"
+-    />
+-    <link rel="stylesheet" href="styles.css" />
+-  </head>
+-  <body>
+-    <header class="navbar">
+-      <div class="container nav-inner">
+-        <a class="brand" href="#home">Hotel Villa Aurora</a>
+-        <button class="nav-toggle" aria-label="Apri menu">☰</button>
+-        <ul class="nav-links">
+-          <li><a class="active" href="#home">Home</a></li>
+-          <li><a href="#camere">Camere</a></li>
+-          <li><a href="#servizi">Servizi</a></li>
+-          <li><a href="#recensioni">Recensioni</a></li>
+-          <li><a href="#contatti">Contatti</a></li>
+-        </ul>
+-      </div>
+-    </header>
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Villa Cristallo | Gourmet sul Lago di Como</title>
++  <meta name="description" content="Villa Cristallo è il ristorante gourmet di lusso sul Lago di Como: cucina d'autore, vista lago e atmosfera esclusiva.">
++  <link rel="preconnect" href="https://fonts.googleapis.com">
++  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
++  <link rel="stylesheet" href="styles.css">
++</head>
++<body>
++  <header class="navbar">
++    <div class="container navbar-inner">
++      <a class="brand" href="index.html">Villa <span>Cristallo</span></a>
++      <ul class="nav-links">
++        <li><a class="active" href="index.html">Home</a></li>
++        <li><a href="menu.html">Menu</a></li>
++        <li><a href="prenotazioni.html">Prenotazioni</a></li>
++        <li><a href="esperienze.html">Esperienze</a></li>
++        <li><a href="contatti.html">Contatti</a></li>
++      </ul>
++    </div>
++  </header>
+ 
+-    <section id="home" class="hero">
+-      <div class="hero-overlay"></div>
+-      <div class="container hero-content reveal">
+-        <p class="eyebrow">Dal 1923 • Restaurato nel 2019 • Lago di Como</p>
+-        <h1>Un’esperienza di lusso sul Lago di Como</h1>
+-        <p>
+-          All’Hotel Villa Aurora ogni giornata inizia con il silenzio dell’acqua che si risveglia, la luce morbida del
+-          mattino che entra dalle grandi finestre e il profumo del giardino che incontra la brezza del lago.
+-          Qui il tempo rallenta: tra colazioni panoramiche, pomeriggi dedicati al benessere e tramonti dorati
+-          riflessi sul Lago di Como, ogni istante è pensato per regalare eleganza, calma e bellezza autentica.
+-        </p>
+-        <p>
+-          Villa Aurora è la cornice ideale per una fuga romantica, una vacanza rilassante o un soggiorno esclusivo
+-          in cui vivere la magia del lago con servizi impeccabili, ambienti raffinati e un’ospitalità discreta e
+-          sofisticata.
+-        </p>
+-        <a class="btn btn-primary" href="#camere">Scopri le camere</a>
+-        <a class="btn btn-outline" href="#contatti">Prenota ora</a>
+-      </div>
+-    </section>
++  <section class="hero" data-parallax="0.25" style="background-image: url('https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=1800&q=80');">
++    <div class="container hero-content">
++      <h1>Benvenuti a Villa Cristallo</h1>
++      <p>Dove il lusso incontra il gusto, tra riflessi dorati e il fascino senza tempo del Lago di Como.</p>
++      <a class="btn btn-primary" href="prenotazioni.html">Prenota ora</a>
++    </div>
++  </section>
+ 
+-    <main>
+-      <section class="section container reveal">
+-        <div class="section-heading">
+-          <p class="eyebrow dark">La storia di Villa Aurora</p>
+-          <h2>Un’eleganza senza tempo affacciata sull’acqua</h2>
+-        </div>
+-        <p class="section-intro">
+-          Villa Aurora nasce come residenza aristocratica affacciata sul Lago di Como all’inizio del Novecento.
+-          Costruita da una famiglia nobile milanese che trascorreva le estati sul lago, la villa era famosa per
+-          le terrazze panoramiche e i giardini sull’acqua. Dopo quasi un secolo di storia, l’edificio è stato
+-          completamente restaurato nel 2019 per diventare un boutique hotel esclusivo. Oggi conserva il fascino
+-          originario della villa storica, unendolo a comfort contemporanei, servizi di alta qualità e un’atmosfera
+-          raffinata che rende ogni soggiorno davvero unico.
+-        </p>
+-      </section>
++  <section class="section reveal">
++    <div class="container">
++      <h2 class="section-title">Chi siamo</h2>
++      <p class="section-subtitle">Villa Cristallo è un ristorante gourmet esclusivo affacciato direttamente sul lago. Lo Chef Alessandro Valenti, 3 stelle Michelin, crea percorsi sensoriali con ingredienti locali selezionati e una regia estetica impeccabile.</p>
++    </div>
++  </section>
+ 
+-      <section id="camere" class="section section-soft">
+-        <div class="container reveal">
+-          <div class="section-heading">
+-            <p class="eyebrow dark">Camere & Suite</p>
+-            <h2>Spazi pensati per il relax, la privacy e la bellezza del lago</h2>
++  <section class="section reveal">
++    <div class="container">
++      <h2 class="section-title">Anteprima Menu</h2>
++      <div class="grid grid-3">
++        <article class="card">
++          <div class="card-media"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80" alt="Antipasto gourmet"></div>
++          <div class="card-content">
++            <h3>Signature Antipasti</h3>
++            <p>Tartare pregiate, caviale e texture contemporanee in un equilibrio perfetto.</p>
++          </div>
++        </article>
++        <article class="card">
++          <div class="card-media"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1200&q=80" alt="Primo piatto raffinato"></div>
++          <div class="card-content">
++            <h3>Primi d'Autore</h3>
++            <p>Risotti, paste fresche e tartufi nobili per un'esperienza gustativa memorabile.</p>
+           </div>
+-          <div class="grid three-col">
+-            <article class="card room-card">
+-              <img
+-                src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+-                alt="Camera Deluxe elegante con letto king-size e balcone"
+-              />
+-              <h3>Camera Deluxe</h3>
+-              <p class="price">da 280€ a notte</p>
+-              <p>
+-                Camera elegante con arredamento moderno, tonalità naturali e grandi finestre luminose con vista sui
+-                giardini dell’hotel. Ideale per coppie che desiderano comfort e tranquillità in un ambiente intimo.
+-                Include letto king-size, bagno in marmo, doccia walk-in, minibar e balcone privato.
+-              </p>
+-            </article>
+-            <article class="card room-card">
+-              <img
+-                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+-                alt="Junior Suite spaziosa con area salotto separata"
+-              />
+-              <h3>Junior Suite</h3>
+-              <p class="price">da 380€ a notte</p>
+-              <p>
+-                Suite spaziosa e luminosa con area salotto separata, dettagli sartoriali e grandi aperture
+-                panoramiche. Perfetta per chi desidera più spazio e un’esperienza di soggiorno superiore, con
+-                ambienti raffinati pensati per vivere il lago con assoluta armonia.
+-              </p>
+-            </article>
+-            <article class="card room-card">
+-              <img
+-                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
+-                alt="Suite Vista Lago con terrazza privata panoramica"
+-              />
+-              <h3>Suite Vista Lago</h3>
+-              <p class="price">da 520€ a notte</p>
+-              <p>
+-                La suite più esclusiva dell’hotel, con ampia terrazza privata affacciata direttamente sul Lago di
+-                Como. Arredi eleganti, materiali pregiati e vista mozzafiato creano l’atmosfera perfetta per
+-                soggiorni romantici o occasioni speciali da ricordare.
+-              </p>
+-            </article>
++        </article>
++        <article class="card">
++          <div class="card-media"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" alt="Dessert elegante"></div>
++          <div class="card-content">
++            <h3>Dolci Scenografici</h3>
++            <p>Finali inaspettati tra cioccolato fondente, pistacchio di Bronte e note aromatiche.</p>
+           </div>
+-        </div>
+-      </section>
++        </article>
++      </div>
++    </div>
++  </section>
+ 
+-      <section id="servizi" class="section container reveal">
+-        <div class="section-heading">
+-          <p class="eyebrow dark">Servizi esclusivi</p>
+-          <h2>Benessere, gusto e momenti memorabili</h2>
+-        </div>
+-        <div class="grid two-col services-grid">
+-          <article class="card service-card">
+-            <img
+-              src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80"
+-              alt="Spa panoramica elegante con vista sul Lago di Como"
+-            />
+-            <h3>Spa panoramica</h3>
+-            <p>
+-              Una spa elegante con vista sul lago dove ritrovare equilibrio e serenità. Gli ospiti possono rilassarsi
+-              in sauna, bagno turco e area relax mentre osservano il panorama del Lago di Como. Sono disponibili
+-              massaggi e trattamenti benessere realizzati con prodotti naturali selezionati.
+-            </p>
+-          </article>
+-          <article class="card service-card">
+-            <img
+-              src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80"
+-              alt="Ristorante gourmet con tavoli eleganti e vista lago"
+-            />
+-            <h3>Ristorante gourmet</h3>
+-            <p>
+-              Il ristorante propone una cucina italiana raffinata con ingredienti locali e stagionali. Gli ospiti
+-              possono cenare nella sala panoramica o sulla terrazza esterna vista lago, vivendo un’esperienza
+-              gastronomica elegante, romantica e profondamente legata al territorio.
+-            </p>
+-          </article>
+-          <article class="card service-card">
+-            <img
+-              src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1200&q=80"
+-              alt="Terrazza sul lago al tramonto con atmosfera rilassante"
+-            />
+-            <h3>Terrazza sul lago</h3>
+-            <p>
+-              La grande terrazza panoramica è uno degli spazi più amati dell’hotel. Qui gli ospiti possono gustare
+-              un aperitivo al tramonto, leggere un libro o semplicemente ammirare il paesaggio in un ambiente
+-              tranquillo e raffinato, dove il lago diventa protagonista.
+-            </p>
+-          </article>
+-          <article class="card service-card">
+-            <img
+-              src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80"
+-              alt="Tour privato in barca sul Lago di Como"
+-            />
+-            <h3>Tour privati in barca</h3>
+-            <p>
+-              L’hotel organizza escursioni private in barca sul Lago di Como per scoprire ville storiche, piccoli
+-              borghi e scorci naturali unici. Ogni tour è guidato e personalizzabile per offrire agli ospiti
+-              un’esperienza intima, esclusiva e indimenticabile.
+-            </p>
+-          </article>
+-        </div>
+-      </section>
++  <section class="section reveal">
++    <div class="container">
++      <h2 class="section-title">Esperienze esclusive</h2>
++      <p class="section-subtitle">Cene private in terrazza, degustazioni guidate in cantina e percorsi firmati dallo Chef per celebrare i momenti irripetibili.</p>
++      <a class="btn btn-secondary" href="esperienze.html">Scopri le esperienze</a>
++    </div>
++  </section>
+ 
+-      <section id="recensioni" class="section section-soft">
+-        <div class="container reveal">
+-          <div class="section-heading">
+-            <p class="eyebrow dark">Recensioni</p>
+-            <h2>Le emozioni raccontate dai nostri ospiti</h2>
+-          </div>
+-          <div class="grid three-col">
+-            <article class="card testimonial">
+-              <p class="stars">★★★★★</p>
+-              <p>
+-                “Uno degli hotel più belli in cui abbiamo soggiornato. Vista spettacolare sul Lago di Como e
+-                servizio impeccabile.”
+-              </p>
+-              <strong>— Sarah M., Londra</strong>
+-            </article>
+-            <article class="card testimonial">
+-              <p class="stars">★★★★★</p>
+-              <p>
+-                “Villa Aurora è semplicemente perfetta. Camere eleganti, ristorante eccellente e personale molto
+-                attento.”
+-              </p>
+-              <strong>— Thomas K., Berlino</strong>
+-            </article>
+-            <article class="card testimonial">
+-              <p class="stars">★★★★★</p>
+-              <p>
+-                “Un soggiorno indimenticabile. La terrazza sul lago al tramonto è qualcosa di magico.”
+-              </p>
+-              <strong>— Andrea F., Milano</strong>
+-            </article>
+-          </div>
+-        </div>
+-      </section>
+-    </main>
++  <section class="section reveal">
++    <div class="container form-wrap" style="text-align:center;">
++      <h2 class="section-title">Il tuo tavolo sul Lago di Como</h2>
++      <p class="section-subtitle" style="margin: 0 auto 1.6rem;">Lasciati avvolgere da una serata d'eccellenza: arte culinaria, accoglienza impeccabile e vista mozzafiato.</p>
++      <a class="btn btn-primary" href="prenotazioni.html">Riserva ora</a>
++    </div>
++  </section>
+ 
+-    <footer id="contatti" class="footer">
+-      <div class="container footer-grid">
+-        <div>
+-          <h3>Hotel Villa Aurora</h3>
+-          <p>Lungolago Mafalda di Savoia 6<br />22100 Como, Italia</p>
+-          <p><strong>Fondazione:</strong> 1923<br /><strong>Restaurato:</strong> 2019</p>
+-        </div>
+-        <div>
+-          <h3>Contatti</h3>
+-          <p><strong>Telefono:</strong> +39 031 998 4455</p>
+-          <p><strong>Email:</strong> booking@villaauroracomo.it</p>
+-        </div>
+-        <div>
+-          <h3>Informazioni soggiorno</h3>
+-          <p><strong>Check-in:</strong> 15:00</p>
+-          <p><strong>Check-out:</strong> 11:00</p>
+-          <p>© <span id="year"></span> Hotel Villa Aurora</p>
+-        </div>
++  <footer class="footer">
++    <div class="container footer-inner">
++      <p>© 2026 Villa Cristallo · Bellagio, Lago di Como</p>
++      <div class="socials">
++        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
++        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
++        <a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a>
+       </div>
+-    </footer>
++    </div>
++  </footer>
+ 
+-    <script src="script.js"></script>
+-  </body>
++  <script src="script.js"></script>
++</body>
+ </html>
+ 
+EOF
+)
